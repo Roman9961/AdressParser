@@ -1,6 +1,9 @@
 <?php
-spl_autoload(function($class_name)
-{
+
+spl_autoload_register('myload');
+
+
+function myload($class_name){
     $lib_path = ROOT.DS.'lib'.DS.strtolower($class_name).'.class.php';
     $controllers_path = ROOT.DS.'controllers'.DS.str_replace('controller', '', strtolower($class_name)).'.controller.php';
     $model_path = ROOT.DS.'models'.DS.strtolower($class_name).'.php';
@@ -21,4 +24,3 @@ spl_autoload(function($class_name)
         throw new Exception('Failed to include class: '. $class_name);
     }
 }
-);

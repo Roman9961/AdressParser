@@ -15,6 +15,7 @@ class Router
 
         //Set Defaults
         $this->action='index';
+        $this->controller = 'pages';
 
         //Get path like /lng/controllers/action/param1/param2/.../...
 
@@ -41,6 +42,19 @@ class Router
         }
 
     }
+
+
+    public function getController()
+    {
+        return $this->controller;
+    }
+
+    public function getAction()
+    {
+        return $this->action;
+    }
+
+
 
 
 }
