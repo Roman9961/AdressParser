@@ -108,6 +108,11 @@ class Address extends Model
             fclose($fp);
 
         }
-        }
+    }
+
+    public  function  json($data){
+                return json_encode($data);
+
+            }
 
 }

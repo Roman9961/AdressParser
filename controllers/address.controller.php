@@ -45,5 +45,12 @@ class AddressController extends Controller
 
     }
 
+    public  function json(){
+
+        if (isset($this->params[0])) {
+            $this->data['addresses']=$this->model->getById($this->params[0]);
+            $this->data['json']= $this->model->json($this->data['addresses']);
+        }
+    }
 
 }
