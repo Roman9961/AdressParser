@@ -18,6 +18,7 @@ function myload($class_name){
 
     elseif (file_exists($model_path)){
         require_once ($model_path);
+        die(1);
     }
 
     else{

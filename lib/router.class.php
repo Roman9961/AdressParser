@@ -43,6 +43,11 @@ class Router
 
     }
 
+    public function getParams()
+    {
+        return $this->params;
+    }
+
 
     public function getController()
     {
@@ -54,6 +59,9 @@ class Router
         return $this->action;
     }
 
+    public  static function  redirect($location){
+        header("Location: $location");
+    }
 
 
 

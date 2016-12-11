@@ -9,11 +9,12 @@ class App
     {
         return self::$router;
     }
+    public static  $csv;
 
     public  static  function run( $uri ){
 
         self::$router = new Router( $uri );
-
+        self::$csv = '../csv/examples.csv';
         // Define conreoller and controller's method
         $controller_class = ucfirst( self::$router->getController(). 'Controller' );
         $controller_method = ucfirst( self::$router->getAction() );
@@ -33,7 +34,7 @@ class App
         }
 
         // Template render
-        $layout_path = VIEWS_PATH.DS.$controller_method.'.html';
+        $layout_path = VIEWS_PATH.DS.'index.html';
         $layout_view_object = new View( compact('content'), $layout_path );
         echo $layout_view_object->render();
     }

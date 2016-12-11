@@ -11,6 +11,7 @@ class Controller
     public function __construct($data=array())
     {
         $this->data = $data;
+        $this->params=App::getRouter()->getParams();
     }
 
 

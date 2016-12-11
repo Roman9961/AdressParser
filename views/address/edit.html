@@ -1,0 +1,18 @@
+<h3>Edit address</h3><br/>
+<form method="post" action="" >
+    <input type="hidden" name="id" value="<?= $data['addresses']['id']?>"/>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<?= $data['addresses']['name']?>" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" value="<?= $data['addresses']['phone']?>" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" id="street" name="street" value="<?= $data['addresses']['street']?>" class="form-control">
+    </div>
+    <input type="submit" class="btn  btn-success" value="Send" />
+
+</form>
